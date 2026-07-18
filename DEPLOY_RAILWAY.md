@@ -69,17 +69,17 @@ APP_NAME=Sistem Barang Medis
 APP_ENV=production
 APP_KEY=base64:GENERATE_KEY_DISINI
 APP_DEBUG=false
-APP_URL=https://your-app.up.railway.app
+APP_URL=https://sistem-barang-medis-production.up.railway.app
 
 LOG_CHANNEL=stack
 LOG_LEVEL=debug
 
 DB_CONNECTION=mysql
-DB_HOST=mysql.railway.app
-DB_PORT=3306
-DB_DATABASE=nama_database_dari_railway
+DB_HOST=tokaido.proxy.rlwy.net
+DB_PORT=57937
+DB_DATABASE=railway
 DB_USERNAME=root
-DB_PASSWORD=password_dari_railway
+DB_PASSWORD=ArAgDkwCDzRtsYYeKTuzFWfXEScSxFFr
 
 CACHE_DRIVER=file
 QUEUE_CONNECTION=sync
@@ -135,6 +135,13 @@ railway run php artisan migrate --force
 4. Masukkan: `php artisan migrate --force`
 5. Klik **"Run"**
 
+**Opsi 3: Via Railway CLI dengan kredensial database**
+
+```bash
+# Set environment variables dan jalankan migrasi
+railway run php artisan migrate --force
+```
+
 ---
 
 ## 🚀 Langkah 7: Test Aplikasi
@@ -145,6 +152,8 @@ railway run php artisan migrate --force
 4. Login dengan akun default:
    - **Email:** `admin@example.com`
    - **Password:** `password`
+
+**Catatan:** Jika aplikasi error, cek Railway Logs untuk melihat pesan error.
 
 ---
 
